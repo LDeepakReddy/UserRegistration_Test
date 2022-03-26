@@ -4,6 +4,10 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class UserRegistrationTest {
+    public static String expected;
+    public static String actual;
+
+
     UserRegistration test = new UserRegistration();
 
     @Test
@@ -36,7 +40,21 @@ public class UserRegistrationTest {
         Assert.assertEquals(true, password);
     }
 
+    @Test
+    public void givenSadMood_ShouldReturnSad() {
+
+        actual = test.analyzeMoodSad("I am In SAD mood");
+        expected = "sad";
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void givenAnyMood_ShouldReturnHappy() {
+        actual = test.analyzeMoodHappy("I am in happy mood");
+        expected = "happy";
+        Assert.assertEquals(expected, actual);
+
+    }
+
 }
-
-
 

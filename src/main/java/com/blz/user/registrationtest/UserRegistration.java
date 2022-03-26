@@ -57,7 +57,17 @@ public class UserRegistration {
             return false;
     }
 
+    public String analyzeMoodSad(String msg) {
+        if (msg.toLowerCase().contains("sad"))
+            return "sad";
+        return null;
+    }
+    public String analyzeMoodHappy(String msg) {
+        if (msg.toLowerCase().contains("happy"))
+            return "happy";
+        return null;
 
+    }
 }
 
 
