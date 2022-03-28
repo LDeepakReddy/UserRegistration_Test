@@ -23,19 +23,19 @@ public class UserRegistrationTest {
     }
 
     @Test
-    public void givenValidEmailHasMandatoryPartsandOptionalParts() {
+    public void givenValidEmailHasMandatoryPartsAndOptionalParts() {
         boolean email = test.validateEmail("abc@gmail.com.com");
         Assert.assertEquals(true, email);
     }
 
     @Test
-    public void givenMobileFormatCountryCodeFollowedBySpaceAnd10DigitNumber() {
+    public void givenMobileFormatCountryCodeSpaceAnd10DigitNumber() {
         boolean mobNum = test.validateMobilenumber("91 9182510123");
         Assert.assertEquals(true, mobNum);
     }
 
     @Test
-    public void givenPasswordMinimum1NumericUpperCaseLowerCaseAndExact1SpecialCharacterValueAndMinimum8Characters() {
+    public void givenPasswordMinimum1Numeric1UpperCaseLowerCaseAndExact1SpecialCharacterValueAndMinimum8Characters() {
         boolean password = test.validatePassword("Deepak@reddy7");
         Assert.assertEquals(true, password);
     }
@@ -43,7 +43,7 @@ public class UserRegistrationTest {
     @Test
     public void givenSadMood_ShouldReturnSad() {
 
-        actual = test.analyzeMoodSad("I am In SAD mood");
+        actual = test.analyzeMoodSad("I am In Sad mood");
         expected = "sad";
         Assert.assertEquals(expected, actual);
     }
